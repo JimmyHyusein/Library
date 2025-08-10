@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left">
+            <h1>LIBRARY</h1></div>
+            <div class="right">
+            <h3>ADD A NEW BOOK</h3>
+            <button id="buttonAdd">+</button></div>
+        </div>
+        <div class="main">
+            <div class="popup">
+                <h1>Book</h1>
+                <input type="text" class ="title" id="title"placeholder="Title">
+                <input type="text" class ="title" id="author"placeholder="Author">
+                <input type="text" class ="title"id="pages"placeholder="Pages">
+                <label>Have you read it?</label>
+                <select name = "read" id="read">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <div class="last">
+                <button id="submit">Submit</button>
+                <button id="cancel">cancel</button></div>
+            </div>
+            <div class="library" id="books">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
