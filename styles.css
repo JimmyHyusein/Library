@@ -93,9 +93,7 @@ body{
     font-size: 30px;
     margin-bottom: 10px;
 }
-/* .hidden{
-    display: flex;
-} */
+
 .last{
     margin-top: 20px;
 }
@@ -215,4 +213,5 @@ body{
         height: 170px;
     }
     
+
 }
