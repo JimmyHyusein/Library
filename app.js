@@ -30,10 +30,7 @@ function Book(title, author, pages, read){
 function addBookToLibraby(){
     
         let titleValue = title.value;
-        // if(titleValue=""){
-        //     alert("Opa");
-        //     return;
-        // }
+        
         let authorValue = author.value;
         let pagesValue = pages.value;
         let readValue = read.value;
@@ -42,7 +39,7 @@ function addBookToLibraby(){
     myLibrary.push(newBook);
     displayBook(newBook, myLibrary.length - 1);
 
-    // Изчистване на формата
+    
     title.value = "";
     author.value = "";
     pages.value = "";
@@ -71,11 +68,11 @@ submit.addEventListener("click", (event) => {
     let readValue = read.value;
 
     if (currentEditIndex === null) {
-        // Добавяне на нова книга
+        
         let newBook = new Book(titleValue, authorValue, pagesValue, readValue);
         myLibrary.push(newBook);
     } else {
-        // Редактиране на съществуваща книга
+       
         myLibrary[currentEditIndex].title = titleValue;
         myLibrary[currentEditIndex].author = authorValue;
         myLibrary[currentEditIndex].pages = pagesValue;
@@ -84,14 +81,14 @@ submit.addEventListener("click", (event) => {
 
     refreshLibrary();
 
-    // Изчистване на формата и скриване на попъпа
+    
     title.value = "";
     author.value = "";
     pages.value = "";
     read.value = "Yes";
 
     popup.style.display = "none";
-    currentEditIndex = null;  // reset
+    currentEditIndex = null; 
 });
 
 function displayBook(book,index) {
@@ -156,9 +153,9 @@ function openEditPopup(index) {
 }
 
 edit.addEventListener("click", () => {
-    if (currentEditIndex === null) return; // няма книга за редакция
+    if (currentEditIndex === null) return; 
     
-    // Вземи новите стойности от формата
+    
     let titleValue = title.value;
     if (titleValue === "") {
         alert("Моля, въведи заглавие");
@@ -168,16 +165,17 @@ edit.addEventListener("click", () => {
     let pagesValue = pages.value;
     let readValue = read.value;
 
-    // Запази ги в масива
+   
     myLibrary[currentEditIndex].title = titleValue;
     myLibrary[currentEditIndex].author = authorValue;
     myLibrary[currentEditIndex].pages = pagesValue;
     myLibrary[currentEditIndex].read = readValue;
 
-    refreshLibrary();  // презареди визуализацията
+    refreshLibrary();  
     popup.style.display = "none";
 });
 
 cancel.addEventListener("click", () => {
     popup.style.display = "none";
 });
+
